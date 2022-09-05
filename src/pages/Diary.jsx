@@ -1,6 +1,7 @@
 import React, {useState, useContext, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { DiaryStateContext } from '../App';
+import { getStringDate } from '../util/data';
 import Layout from '../components/Layout';
 import Header from '../components/Header'
 const Diary = () => {
@@ -29,18 +30,13 @@ const Diary = () => {
 	if(!data){
 		return <div className='Diary-DeTail-Page'>로딩중입니다...</div>
 	}else{
-		<div className='Diary-DeTail-Page'></div>
+		return <div className='Diary-DeTail-Page'>
+			<Header headerText={`${getStringDate(new Date(data.date))}`}/>
+		</div>
+			
+		
 	}
-	return (
-		<Layout>
-		<Header/>
-			<h1>Diary</h1>
-			<span onClick={()=>{
-				navigate('/')
-			}}>Home으로 가기</span>
-			<p>이곳은 일기장 상세페이지 입니다.</p>
-		</Layout>
-	)
+	
 }
 
 export default Diary

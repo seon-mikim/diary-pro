@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { getStringDate } from '../util/data'
+
 import Btn from './Btn'
 
 const DiaryItem = ({id, emotion, content, date}) => {
