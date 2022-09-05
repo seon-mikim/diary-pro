@@ -26,29 +26,42 @@
 
 .Diary-detail-page .emotion-descript{
     font-size: 25px;
+    
 }
 
 .Diary-detail-page .img-wrap-1 {
     background-color: #64c964;
-    color: white;
+    
 }
 
 .Diary-detail-page .img-wrap-2 {
     background-color: #9dd772;
-    color: white;
+    
 }
 
 .Diary-detail-page .img-wrap-3 {
     background-color: #fdce17;
-    color: white;
+   
 }
 
 .Diary-detail-page .img-wrap-4 {
     background-color: #fd8446;
-    color: white;
+    
 }
 
 .Diary-detail-page .img-wrap-5 {
     background-color: #fd565f;
-    color: white;
+    
+}
+
+
+
+.Diary-detail-page .diary-content-wrap {
+    width: 100%;
+}
+
+.Diary-detail-page .diary-content-wrap p{
+    padding: 20px;
+    text-align: left;
+
 }
