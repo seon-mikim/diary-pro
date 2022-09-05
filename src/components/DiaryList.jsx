@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Btn from './Btn'
 import DiaryItem from './DiaryItem'
 import './style.css'
+
 const sortOptionList = [
   {value:'latest', name:'최신순'},
   {value:'oldest', name:'오래된순'}

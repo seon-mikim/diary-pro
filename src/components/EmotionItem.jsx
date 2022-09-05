@@ -1,4 +1,5 @@
 import React from 'react'
+import './style.css'
 
 const EmotionItem = ({emotion_id, emotion_img, emotion_descript, onClick, isSelected}) => {
   return (

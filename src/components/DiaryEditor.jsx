@@ -8,6 +8,7 @@ import { getStringDate } from '../util/data'
 import { emotionList } from '../util/emotion'
 import Btn from './Btn'
 import EmotionItem from './EmotionItem'
+import './style.css'
 
 
 

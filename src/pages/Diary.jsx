@@ -6,6 +6,7 @@ import { emotionList } from '../util/emotion';
 import Layout from '../components/Layout';
 import Header from '../components/Header'
 import Btn from '../components/Btn';
+import './style.css'
 const Diary = () => {
 
     const {id} = useParams();  
@@ -30,7 +31,7 @@ const Diary = () => {
     },[id, diaryList])
 	
 	if (!data){
-		return <div className='Diary-DeTail-Page'>로딩중입니다...</div>
+		return <div className='Diary-detail-page'>로딩중입니다...</div>
 	
 	} else {
 		const  curEmotionData = emotionList.find((it)=>parseInt(it.emotion_id) === parseInt(data.emotion))
@@ -38,7 +39,7 @@ const Diary = () => {
 		return (
 			
 			<Layout>
-				<div className='Diary-DeTail-Page'>
+				<div className='Diary-detail-page'>
 				
 				<Header headerText={`${getStringDate(new Date(data.date))} 기록`} 
 					leftChild={
