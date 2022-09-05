@@ -12,7 +12,7 @@
     font-weight: bold;
 }
 
-.Diary-detail-page .diary-img-area{
+.Diary-detail-page .diary-img-wrap{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -26,4 +26,29 @@
 
 .Diary-detail-page .emotion-descript{
     font-size: 25px;
+}
+
+.Diary-detail-page .img-wrap-1 {
+    background-color: #64c964;
+    color: white;
+}
+
+.Diary-detail-page .img-wrap-2 {
+    background-color: #9dd772;
+    color: white;
+}
+
+.Diary-detail-page .img-wrap-3 {
+    background-color: #fdce17;
+    color: white;
+}
+
+.Diary-detail-page .img-wrap-4 {
+    background-color: #fd8446;
+    color: white;
+}
+
+.Diary-detail-page .img-wrap-5 {
+    background-color: #fd565f;
+    color: white;
 }
