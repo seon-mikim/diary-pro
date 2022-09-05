@@ -52,6 +52,17 @@ const Diary = () => {
 					}
 					
 				/>
+				<article>
+					<section>
+						<h4>오늘의 감정</h4>
+						<div className="diary-img-area">
+							<img src={curEmotionData.emotion_img}/>
+						</div>
+						<div className="emotion-descript">
+							{curEmotionData.emotion_descript}
+						</div>
+					</section>
+				</article>
 					
 					
 				</div>
