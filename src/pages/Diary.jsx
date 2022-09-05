@@ -8,6 +8,7 @@ const Diary = () => {
     const {id} = useParams();  
     const navigate = useNavigate()
     const diaryList = useContext(DiaryStateContext)
+	const [data, setData] = userState();
 
     useEffect(() => {
       if(diaryList.length >= 1){
@@ -15,6 +16,7 @@ const Diary = () => {
 		)
 		if(targetDiary){
 			//일기가 존재할때
+			setData(targetDiary)
 		}else{
 			//일기가 없을때
 			alert('없는 일기입니다.')
