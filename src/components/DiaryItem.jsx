@@ -7,7 +7,7 @@ const DiaryItem = ({id, emotion, content, date}) => {
   const strDate = new Date(parseInt(date)).toLocaleDateString()
   const goEidt = (e) => {
     e.stopPropagation();
-    navigate(`/edit/:${id}`)
+    navigate(`/edit/${id}`)
   }
 
   return (
