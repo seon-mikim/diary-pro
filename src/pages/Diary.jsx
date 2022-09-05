@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, {useState, useContext, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { DiaryStateContext } from '../App';
 import Layout from '../components/Layout';
@@ -8,7 +8,7 @@ const Diary = () => {
     const {id} = useParams();  
     const navigate = useNavigate()
     const diaryList = useContext(DiaryStateContext)
-	const [data, setData] = userState();
+	const [data, setData] = useState();
 
     useEffect(() => {
       if(diaryList.length >= 1){
@@ -26,6 +26,11 @@ const Diary = () => {
       }
     },[id, diaryList])
 	
+	if(!data){
+		return <div className='Diary-DeTail-Page'>로딩중입니다...</div>
+	}else{
+		<div className='Diary-DeTail-Page'></div>
+	}
 	return (
 		<Layout>
 		<Header/>
