@@ -1,3 +1,8 @@
+const env = process.env;
+env.PUBLIC_URL = env.PUBLIC_URL || "";
+// 이미지가 경로를 찾지못할경우 필요 
+
+
 export const emotionList = [
     {
         emotion_id: 1,
