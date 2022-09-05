@@ -17,6 +17,8 @@ const Diary = () => {
 			//일기가 존재할때
 		}else{
 			//일기가 없을때
+			alert('없는 일기입니다.')
+			navigate('/', {replace: true})
 		}
 		
       }
