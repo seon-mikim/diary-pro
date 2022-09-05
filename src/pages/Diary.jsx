@@ -56,7 +56,7 @@ const Diary = () => {
 				<article>
 					<section>
 						<h4>오늘의 감정</h4>
-						<div className="diary-img-area">
+						<div className={['diary-img-area', `img-wrap-${data.emotion}`].join(" ")}>
 							<img src={curEmotionData.emotion_img}/>
 						</div>
 						<div className="emotion-descript">

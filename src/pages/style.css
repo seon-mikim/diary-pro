@@ -6,3 +6,24 @@
     width: 100%;
     margin-bottom: 100px;
 }
+
+.Diary-detail-page h4 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.Diary-detail-page .diary-img-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    background-color: #ececec;
+    
+}
+
+.Diary-detail-page .emotion-descript{
+    font-size: 25px;
+}
