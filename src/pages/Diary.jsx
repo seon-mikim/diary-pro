@@ -35,11 +35,20 @@ const Diary = () => {
 			<Layout>
 				<div className='Diary-DeTail-Page'>
 				
-				<Header headerText={`${getStringDate(new Date(data.date))}`} 
-					leftChild={<Btn text={'< 뒤로가기'} type={'default'} onClick={()=>{navigate('/')} }/>}
-					rightChild={<Btn text={'수정하기'} type={'default'} onClick={()=>{navigate(`/edit/${id}`)}}/>}
+				<Header headerText={`${getStringDate(new Date(data.date))} 기록`} 
+					leftChild={
+						<Btn text={'< 뒤로가기'} type={'default'} onClick={()=>navigate('/')} />
+					}
+
+					rightChild={
+						<Btn text={'수정하기'} type={'default'} onClick={()=>navigate(`/edit/${data.id}`)} 
 					/>
-				
+					
+					}
+					
+				/>
+					
+					
 				</div>
 			</Layout>
 		
