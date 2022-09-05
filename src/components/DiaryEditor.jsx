@@ -4,6 +4,7 @@ import Layout from './Layout'
 import Header from './Header'
 import { useNavigate } from 'react-router-dom'
 import {DiaryDispatchContext} from '../App'
+import { getStringDate } from '../util/data'
 import Btn from './Btn'
 import EmotionItem from './EmotionItem'
 
@@ -44,9 +45,7 @@ const DiaryEditor = ({isEdit, originData}) => {
         
     }
     const navigate = useNavigate()
-    const getStringDate = (date) => {
-        return date.toISOString().slice(0, 10)
-    }
+ 
     const [date, setDate] = useState(getStringDate(new Date()))
     const {onCreate, onEdit} =useContext(DiaryDispatchContext)
     const handlerSubmit = () =>{
