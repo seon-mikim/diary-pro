@@ -108,7 +108,7 @@ const DiaryEditor = ({isEdit, originData}) => {
                 <section>
                     <div className='btn-area'>
                         <Btn text={'취소하기'} type={'default'} onClick={()=>{navigate('/')}}/>
-                        <Btn text={'작성완료'} type={'positive'} onClick={handlerSubmit}/> 
+                        <Btn text={isEdit ?'수정완료': '작성완료'} type={'positive'} onClick={handlerSubmit}/> 
                     </div>
                 </section>
             </div>
