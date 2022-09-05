@@ -2,6 +2,7 @@ import React, {useState, useContext, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { DiaryStateContext } from '../App';
 import { getStringDate } from '../util/data';
+import { emotionList } from '../util/emotion';
 import Layout from '../components/Layout';
 import Header from '../components/Header'
 import Btn from '../components/Btn';
@@ -32,7 +33,10 @@ const Diary = () => {
 		return <div className='Diary-DeTail-Page'>로딩중입니다...</div>
 	
 	} else {
+		const  curEmotionData = emotionList.find((it)=>parseInt(it.emotion_id) === parseInt(data.emotion))
+
 		return (
+			
 			<Layout>
 				<div className='Diary-DeTail-Page'>
 				
