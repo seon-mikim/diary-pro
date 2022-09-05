@@ -4,6 +4,7 @@ import { DiaryStateContext } from '../App';
 import { getStringDate } from '../util/data';
 import Layout from '../components/Layout';
 import Header from '../components/Header'
+import Btn from '../components/Btn';
 const Diary = () => {
 
     const {id} = useParams();  
@@ -30,10 +31,19 @@ const Diary = () => {
 	if(!data){
 		return <div className='Diary-DeTail-Page'>로딩중입니다...</div>
 	}else{
-		return <div className='Diary-DeTail-Page'>
-			<Header headerText={`${getStringDate(new Date(data.date))}`}/>
-		</div>
-			
+		return (
+			<Layout>
+				<div className='Diary-DeTail-Page'>
+				
+				<Header headerText={`${getStringDate(new Date(data.date))}`} 
+					leftChild={<Btn text={'< 뒤로가기'} type={'default'} onClick={()=>{navigate('/')} }/>}
+					rightChild={<Btn text={'수정하기'} type={'default'} onClick={()=>{navigate(`/edit/${id}`)}}/>}
+					/>
+				
+				</div>
+			</Layout>
+		
+		)		
 		
 	}
 	
