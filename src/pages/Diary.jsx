@@ -28,9 +28,10 @@ const Diary = () => {
       }
     },[id, diaryList])
 	
-	if(!data){
+	if (!data){
 		return <div className='Diary-DeTail-Page'>로딩중입니다...</div>
-	}else{
+	
+	} else {
 		return (
 			<Layout>
 				<div className='Diary-DeTail-Page'>
