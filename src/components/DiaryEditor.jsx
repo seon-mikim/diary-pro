@@ -23,7 +23,7 @@ const DiaryEditor = ({isEdit, originData}) => {
     const navigate = useNavigate()
  
     const [date, setDate] = useState(getStringDate(new Date()))
-    const {onCreate, onEdit} =useContext(DiaryDispatchContext)
+    const {onCreate, onEdit, onRemove} =useContext(DiaryDispatchContext)
     const handlerSubmit = () =>{
         if(content.length < 1){
             contentRef.current.focus();
@@ -51,7 +51,8 @@ const DiaryEditor = ({isEdit, originData}) => {
 
     const handlerRemove = () => {
         if (window.confirm('정말 삭제하시겠어요?')){
-
+            onRemove(originData.id)
+            navigate('/', {replace: true})
         }
     }
      
