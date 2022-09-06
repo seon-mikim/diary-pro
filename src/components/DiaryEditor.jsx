@@ -53,7 +53,11 @@ const DiaryEditor = ({isEdit, originData}) => {
     <div className='DiaryEditor'>
         <Layout>
             
-            <Header headerText={isEdit ? "일기 수정하기" : "새 일기쓰기"} leftChild={<Btn text={'< 뒤로가기'} onClick={()=>navigate('/')} type={'default'}/>}/>
+            <Header headerText={isEdit ? "일기 수정하기" : "새 일기쓰기"} 
+            leftChild={<Btn text={'< 뒤로가기'} onClick={()=>navigate('/')} type={'default'}/>
+            }
+            rightChild={<Btn text={'삭제하기'} onClick={()=>{}} type={'na'}/>}
+            />
             
             <div>
                 
