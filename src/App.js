@@ -39,6 +39,11 @@ export const DiaryDispatchContext = React.createContext()
 
 function App() {
 
+  const localStorage = localStorage.getItem('diary')
+  if(localData){
+    const diaryList = JSON.parse(localData)
+    dataId.current =
+  }
  
   const [data, dispatch] = useReducer(reducer, [])
   const dataId = useRef(3) 
