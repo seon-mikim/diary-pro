@@ -27,37 +27,20 @@ const reducer = (state, action) => {
     default:
       return state
   } 
+  localStorage.setItem('diary', JSON.stringify(newState))
   return newState
 }
 
 export const DiaryStateContext = React.createContext()
 export const DiaryDispatchContext = React.createContext()
 
-const dummyData = [{
-  id: 1,
-  emotion: 1,
-  content:'오늘의 일기 1번',
-  date: 1662349574125,
-},
-{
-  id: 2,
-  emotion: 5,
-  content:'오늘의 일기 2번',
-  date: 1662349574126,
-}]
-
 
 
 
 function App() {
 
-  useEffect(()=>{
-    const item1 = localStorage.getItem('item1')
-    const item2 = localStorage.getItem('item2')
-    const item3 = localStorage.getItem('item3')
-    console.log({item1, item2, item3})
-  },[])
-  const [data, dispatch] = useReducer(reducer, dummyData)
+ 
+  const [data, dispatch] = useReducer(reducer, [])
   const dataId = useRef(0) 
   const onCreate=(date, content, emotion) =>{
     dispatch({type:'CREATE',
