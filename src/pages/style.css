@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+
     width: 100%;
     margin-bottom: 100px;
 }
@@ -17,8 +18,8 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 250px;
-    height: 250px;
+    width: 400px;
+    height: 400px;
     border-radius: 5px;
     background-color: #ececec;
     
@@ -30,27 +31,27 @@
 }
 
 .Diary-detail-page .img-wrap-1 {
-    background-color: #64c964;
+    background-color: #78b2e5;
     
 }
 
 .Diary-detail-page .img-wrap-2 {
-    background-color: #9dd772;
+    background-color: #93c9ed;
     
 }
 
 .Diary-detail-page .img-wrap-3 {
-    background-color: #fdce17;
-   
+    background-color: #b4b4b4;
+
 }
 
 .Diary-detail-page .img-wrap-4 {
-    background-color: #fd8446;
+    background-color: #ffc768;
     
 }
 
 .Diary-detail-page .img-wrap-5 {
-    background-color: #fd565f;
+    background-color: #fc9c52;
     
 }
 
