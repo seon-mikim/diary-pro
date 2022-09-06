@@ -1,4 +1,4 @@
-import React ,{ useReducer, useRef } from "react";
+import React ,{ useEffect, useReducer, useRef } from "react";
 import "./App.css"
 import Router from './router/Router';
 
@@ -48,7 +48,15 @@ const dummyData = [{
 
 
 
+
 function App() {
+
+  useEffect(()=>{
+    const item1 = localStorage.getItem('item1')
+    const item2 = localStorage.getItem('item2')
+    const item3 = localStorage.getItem('item3')
+    console.log({item1, item2, item3})
+  },[])
   const [data, dispatch] = useReducer(reducer, dummyData)
   const dataId = useRef(0) 
   const onCreate=(date, content, emotion) =>{
