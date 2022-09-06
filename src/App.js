@@ -42,7 +42,7 @@ function App() {
   const localStorage = localStorage.getItem('diary')
   if(localData){
     const diaryList = JSON.parse(localData)
-    dataId.current =
+    dataId.current = parseInt(diaryList[0].id)
   }
  
   const [data, dispatch] = useReducer(reducer, [])
