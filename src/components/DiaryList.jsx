@@ -17,11 +17,11 @@ const filterOptionList = [
 ]
 
 
-const ControlMenu = ({value, onChange, optionList}) => {
+const ControlMenu = React.memo(({value, onChange, optionList}) => {
   return <select className='ControlMenu' value={value} onChange={(e)=>onChange(e.target.value)}>
     {optionList.map((it,idx)=><option value={it.value} key={idx}>{it.name}</option>)}
   </select>
-}
+})
 
 const DiaryList = ({diaryList}) => {
    const [sortType,setSortType ] = useState("latest")
