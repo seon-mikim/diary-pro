@@ -38,7 +38,7 @@ const DiaryEditor = ({isEdit, originData}) => {
                 onEdit(originData.id, date, content, emotion)
             }
         }
-        navigate('/', {replace: true});
+        navigate('/');
     };
 
     useEffect(()=>{
@@ -52,7 +52,7 @@ const DiaryEditor = ({isEdit, originData}) => {
     const handlerRemove = () => {
         if (window.confirm('정말 삭제하시겠어요?')){
             onRemove(originData.id)
-            navigate('/', {replace: true})
+            navigate('/')
         }
     }
      
