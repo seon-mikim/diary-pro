@@ -48,6 +48,12 @@ const DiaryEditor = ({isEdit, originData}) => {
             setContent(originData.content)
         }
     },[isEdit, originData])
+
+    const handlerRemove = () => {
+        if (window.confirm('정말 삭제하시겠어요?')){
+
+        }
+    }
      
   return (
     <div className='DiaryEditor'>
@@ -56,7 +62,7 @@ const DiaryEditor = ({isEdit, originData}) => {
             <Header headerText={isEdit ? "일기 수정하기" : "새 일기쓰기"} 
             leftChild={<Btn text={'< 뒤로가기'} onClick={()=>navigate('/')} type={'default'}/>
             }
-            rightChild={<Btn text={'삭제하기'} onClick={()=>{}} type={'na'}/>}
+            rightChild={isEdit && <Btn text={'삭제하기'} onClick={handlerRemove} type={'negative'}/>}
             />
             
             <div>
