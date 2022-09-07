@@ -1,29 +1,43 @@
 import React, {useState} from 'react'
+import {useDispatch} from 'react-redux'
 
-const Signin = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState(""); 
-    
-    const onEmailHandler = (event) => {
-      setEmail(event.currentTarget.value);
-    }
+const Signin = (props) => {
+  const dispatch = useDispatch()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState(""); 
   
-    const onPasswordHandler = (event) => {
-      setPassword(event.currentTarget.value)
+  const onEmailHandler = (event) => {
+    setEmail(event.currentTarget.value);
   }
-  
-    const onSubmit = (event) => {
-      event.preventDefault();
+
+  const onPasswordHandler = (event) => {
+    setPassword(event.currentTarget.value)
+}
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+
+    let body = {
+      email: email,
+      password: password
     }
+
+    dispatch((body))
+      .then(response => {
+          if(response.payload.loginSuccess) {
+              props.history.push('/')
+          } else {
+              alert('Error')
+          }
+      })
+  }
 
   return (
-    <div class="sign">
-    <form>
-        <div><input name="email" type="email" placeholder="이메일" value={email} onChange={onEmailHandler} class="loginregister__input"/></div>
-        <div><input name="password" type="password" placeholder="비밀번호" value={password} onChange={onPasswordHandler} class="loginregister__input"/></div>
-        <div><button type="submit" onSubmit={onSubmit} class="loginregister__button">로그인</button></div>
-    </form>
-  </div>
+        <form onSubmit={onSubmit}>
+            <div><input type="email" placeholder="이메일" value={email} onChange={onEmailHandler} className="loginregister__input"/></div>
+            <div><input type="password" placeholder="비밀번호" value={password} onChange={onPasswordHandler} className="loginregister__input"/></div>
+            <div><button type="submit" className="loginregister__button">로그인</button></div>
+        </form>
   );
 };
 
