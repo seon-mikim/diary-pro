@@ -7,6 +7,7 @@ import Home from '../pages/Home';
 import New from '../pages/New';
 import Signin from '../pages/Signin'
 import Signup from '../pages/Signup';
+import Landing from '../pages/Landing';
 
 
 const Router = () => {
@@ -14,7 +15,8 @@ const Router = () => {
     <BrowserRouter>
     <Navbar />
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path='/' element={<Landing />} />
+      <Route path="/home" element={<Home />} />
       <Route path="/edit/:id" element={<Edit />} />
       <Route path="/new" element={<New/>} />
       <Route path="/diary/:id" element={<Diary />} />
