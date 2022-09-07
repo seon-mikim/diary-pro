@@ -39,15 +39,15 @@ const DiaryList = ({diaryList}) => {
     }
     const compare = (a, b) => {
       if(sortType ==='latest'){
-        return parseInt(b.date)- parseInt(a.date)
+        return parseInt(b.date) - parseInt(a.date)
       }else {
-        return parseInt(a.date)- parseInt(b.date)
+        return parseInt(a.date) - parseInt(b.date)
       }
     }
     const copyList = JSON.parse(JSON.stringify(diaryList))
 
-    const filterList =  filter === 'all'? copyList:  copyList.filter((it)=> filterCallBack(it))
-    const sortedList = filterList.sort(compare)
+    const filteredList =  filter === 'all'? copyList : copyList.filter((it)=> filterCallBack(it))
+    const sortedList = filteredList.sort(compare)
     return sortedList;
    }
   return (

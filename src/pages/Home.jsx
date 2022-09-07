@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import DiaryList from '../components/DiaryList'
 import Btn from '../components/Btn'
 import { DiaryStateContext } from '../App'
+import Navbar from '../components/NavBar'
 
 
 const Home = () => {
@@ -51,6 +52,7 @@ const Home = () => {
  
           return (
             <Layout>
+              <Navbar/>
        <Header headerText={headText} leftChild={<Btn text={'<'} onClick={decreaseMonth}/> } rightChild={<Btn text={'>'} onClick={increaseMonth}/>}/>
 
   

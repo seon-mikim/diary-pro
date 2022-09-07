@@ -4,14 +4,21 @@ import Diary from '../pages/Diary';
 import Edit from '../pages/Edit';
 import Home from '../pages/Home';
 import New from '../pages/New';
+import Signin from '../pages/Signin'
+import Signup from '../pages/Signup';
+
+
 const Router = () => {
   return (
     <BrowserRouter>
     <Routes>
+     
       <Route  path="/" element={<Home />} />
       <Route path="/edit/:id" element={<Edit />} />
       <Route path="/new" element={<New/>} />
       <Route path="/diary/:id" element={<Diary />} />
+      <Route path="/signin" element={<Signin />} />
+      <Route path="/signup" element={<Signup />} />
     </Routes>
   </BrowserRouter>
   )
