@@ -5,7 +5,7 @@ import Router from './router/Router';
 
 const reducer = (state, action) => {
   let newState =[];
- 
+
   switch(action.type){
     case 'INIT':{
         return action.data 
@@ -48,8 +48,8 @@ function App() {
     dispatch({type:"INIT", data:diaryList})
   } 
   },[])
- 
- 
+
+  
   const dataId = useRef(3) 
   const onCreate=(date, content, emotion) =>{
     dispatch({type:'CREATE',

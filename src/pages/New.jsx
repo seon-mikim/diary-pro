@@ -7,6 +7,6 @@ const New = () => {
       <DiaryEditor/>
     </div>
   )
- }
+}
 export default New
 

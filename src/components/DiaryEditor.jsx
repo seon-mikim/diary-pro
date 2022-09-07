@@ -21,7 +21,7 @@ const DiaryEditor = ({isEdit, originData}) => {
         
     }
     const navigate = useNavigate()
- 
+
     const [date, setDate] = useState(getStringDate(new Date()))
     const {onCreate, onEdit, onRemove} =useContext(DiaryDispatchContext)
     const handlerSubmit = () =>{
@@ -55,8 +55,8 @@ const DiaryEditor = ({isEdit, originData}) => {
             navigate('/', {replace: true})
         }
     }
-     
-  return (
+
+    return (
     <div className='DiaryEditor'>
         <Layout>
             
@@ -71,13 +71,13 @@ const DiaryEditor = ({isEdit, originData}) => {
 
                 <section>
                     <h4>오늘은 언제인가요?</h4>
-                  
+
                     <div className="input-area">
                         <input className='input-date' type="date" value={date} onChange={(e)=> setDate(e.target.value)} />
                     </div>
                 
                 </section>
-               
+
                 <section>
                     <h4>오늘의 감정</h4>
                     <div className="input-area emotion-select-list-area">

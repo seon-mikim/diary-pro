@@ -21,7 +21,6 @@ header .head_text{
 }
 
 header .head_btn_left {
-   
     justify-content: start;
 }
 
@@ -34,13 +33,13 @@ header .head_btn_right{
 
 
 .Btn{
- cursor: pointer;
- border: none;
- border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
 
- padding: 10px 20px;
- font-size: 18px;
- word-spacing: normal;
+    padding: 10px 20px;
+    font-size: 18px;
+    word-spacing: normal;
 }
 .Btn_default {
     background-color: #ececec;

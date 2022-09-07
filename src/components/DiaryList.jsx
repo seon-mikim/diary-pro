@@ -49,7 +49,7 @@ const DiaryList = ({diaryList}) => {
     const filterList =  filter === 'all'? copyList:  copyList.filter((it)=> filterCallBack(it))
     const sortedList = filterList.sort(compare)
     return sortedList;
-   }
+}
   return (
   <div className='DiaryList'>
     <div className="menu_wrap">
@@ -66,8 +66,8 @@ const DiaryList = ({diaryList}) => {
     
 
     
-   
-   {getProcesseDiaryList().map((it)=><DiaryItem key={it.id} {...it}/>)}
+    
+    {getProcesseDiaryList().map((it)=><DiaryItem key={it.id} {...it}/>)}
 
   </div>
   )
