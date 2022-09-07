@@ -12,9 +12,9 @@ function Navbar() {
             <ul className="navbar">
                 <li><Link to="/">Home</Link></li>
                 {sign ? (
-                    <li><Link to="/signin"><button onClick={onClick}>로그인</button></Link></li>
+                    <li><Link to="/signup"><button onClick={onClick}>로그인</button></Link></li>
                     ) : (
-                    <li><Link to="/signup"><button onClick={onClick}>회원가입</button></Link></li>
+                    <li><Link to="/signin"><button onClick={onClick}>회원가입</button></Link></li>
                 )}      
             </ul>
         </div>

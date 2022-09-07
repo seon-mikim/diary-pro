@@ -34,11 +34,13 @@ const Signin = (props) => {
   }
 
   return (
+    <div className='sign'>
         <form onSubmit={onSubmit}>
             <div><input type="email" placeholder="이메일" value={email} onChange={onEmailHandler} className="loginregister__input"/></div>
             <div><input type="password" placeholder="비밀번호" value={password} onChange={onPasswordHandler} className="loginregister__input"/></div>
             <div><button type="submit" className="loginregister__button">로그인</button></div>
         </form>
+    </div>
   );
 };
 
