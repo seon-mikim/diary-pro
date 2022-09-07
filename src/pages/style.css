@@ -78,18 +78,20 @@
     justify-content: center;
     padding: auto;
 }
-.sign__input {
-    width: 300px;
-    height: 50px;
-    padding: 20px;
-    margin: 10px;
+
+.sign div{
+    margin: 15px;
 }
-.sign__button {
-    background-color: rgb(248, 47, 98);
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    width: 100%;
-    border-radius: 40px;
-    height: 48px;
-    margin-top: 10px;
+
+.sign input {
+    width: 300px;
+    height: 25px;
+    border-radius: 8px;
+    border: 1px solid #e2e2e2;
+
+}
+
+.sign .Btn{
+    width: 305px;
+
 }

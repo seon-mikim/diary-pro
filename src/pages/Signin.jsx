@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
+import Btn from "../components/Btn"
 import './style.css'
 
 const Signin = (props) => {
@@ -38,7 +39,7 @@ const Signin = (props) => {
         <form onSubmit={onSubmit}>
             <div><input type="email" placeholder="이메일" value={email} onChange={onEmailHandler} className="loginregister__input"/></div>
             <div><input type="password" placeholder="비밀번호" value={password} onChange={onPasswordHandler} className="loginregister__input"/></div>
-            <div><button type="submit" className="loginregister__button">로그인</button></div>
+            <div><Btn text={'로그인'} type={"positive"}/></div>
         </form>
     </div>
   );
