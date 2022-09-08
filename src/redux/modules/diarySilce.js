@@ -1,5 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios"
 
+const url = "http://13.125.243.242/"
+
+export const getDiary = createAsyncThunk("GET_DIARY", async () =>{
+    const res = await axios.get(url);
+    return res.data
+})
+
+
+
+let num = 0
 
 const initialState ={
     diary:{
@@ -7,6 +18,8 @@ const initialState ={
         content:"",
         date:"",
         emotion_id:3,
+        emotion_img: process.env.PUBLIC_URL + `/assets/emotion${num}.png`,
+        emotion_descript:'',
     },
    
 }
@@ -21,6 +34,8 @@ export const diarySlice = createSlice({
                 content: "",
                 date:"",
                 emotion_id:null,
+                emotion_img: process.env.PUBLIC_URL + `/assets/emotion${num}.png`,
+                emotion_descript:'',
             }
         },
 
