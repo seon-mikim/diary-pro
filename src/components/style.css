@@ -95,8 +95,8 @@ header .head_btn_right{
 
 .DiaryItem .emotion-img-area{
     cursor: pointer;
-    min-width: 120px;
-    height: 65px;
+    min-width: 140px;
+    height: 80px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
