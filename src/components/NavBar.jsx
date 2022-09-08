@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from "react-router-dom";
+import Btn from './Btn';
 import "./style.css"
 
 function Navbar() {
@@ -12,9 +13,9 @@ function Navbar() {
             <ul className="navbar">
                 <li><Link to="/">Home</Link></li>
                 {sign ? (
-                    <li><Link to="/sign_in"><button onClick={onClick}>로그인</button></Link></li>
+                    <li><Link to="/sign_in"><Btn text={'로그인'}/></Link></li>
                     ) : (
-                    <li><Link to="/sign_up"><button onClick={onClick}>회원가입</button></Link></li>
+                    <li><Link to="/sign_up"><button text={'회원가입'}/></Link></li>
                 )}      
             </ul>
         </div>
