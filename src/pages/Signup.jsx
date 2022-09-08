@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 import Btn from '../components/Btn';
 import Header from "../components/Header"
 import './style.css'
 
 
 const Signup = () => {
-
+  const navigate = useNavigate()
   const [name, setName] = useState("")
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("")
@@ -42,7 +43,7 @@ const Signup = () => {
           <div><input name="email" type="email" placeholder="이메일" value={email} onChange={onEmailHandler} class="loginregister__input"/></div>
           <div><input name="password" type="password" placeholder="비밀번호" value={password} onChange={onPasswordHandler} class="loginregister__input"/></div>
           <div><input name="confirmPassword" type="password" placeholder="비밀번호 확인" value={confirmPassword} onChange={onConfirmPasswordHandler} class="loginregister__input"/></div>
-          <div><Btn text={'계정 생성하기'} type={'positive'} /></div>
+          <div><Btn text={'계정 생성하기'} type={'positive'} onClick={navigate} /></div>
       </form>
     </div>
 
