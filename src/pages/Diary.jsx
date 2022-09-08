@@ -1,5 +1,5 @@
 import React, {useState, useContext, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate,useParams} from 'react-router-dom'
 import { DiaryStateContext } from '../App';
 import { getStringDate } from '../util/data';
 import { emotionList } from '../util/emotion';
@@ -7,7 +7,14 @@ import Layout from '../components/Layout';
 import Header from '../components/Header'
 import Btn from '../components/Btn';
 import './style.css'
+import { useDispatch} from 'react-redux';
+
 const Diary = () => {
+	
+	
+    
+   
+
 
     const {id} = useParams();  
     const navigate = useNavigate()

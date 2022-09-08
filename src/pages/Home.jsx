@@ -51,13 +51,14 @@ const Home = () => {
 
  
           return (
-            <Layout>
-              <Navbar/>
-       <Header headerText={headText} leftChild={<Btn text={'<'} onClick={decreaseMonth}/> } rightChild={<Btn text={'>'} onClick={increaseMonth}/>}/>
-
-  
-       <DiaryList diaryList={data}/>
-    </Layout>
+            <div>
+                <Navbar/>
+               <Header headerText={headText} leftChild={<Btn text={'<'} onClick={decreaseMonth}/> } rightChild={<Btn text={'>'} onClick={increaseMonth}/>}/>
+                <Layout>
+                     <DiaryList diaryList={data}/>
+                </Layout>
+            </div>
+          
     
   )
 }

@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState,useEffect } from 'react'
+import { useNavigate} from 'react-router-dom'
+import{__AddDiary} from "../redux/modules/diarySilce"
+
 import Btn from './Btn'
 import DiaryItem from './DiaryItem'
 import './style.css'
@@ -24,6 +26,7 @@ const ControlMenu = React.memo(({value, onChange, optionList}) => {
 })
 
 const DiaryList = ({diaryList}) => {
+
    const [sortType,setSortType ] = useState("latest")
    const [filter, setFilter] = useState('all')
    const navigate = useNavigate()

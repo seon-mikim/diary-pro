@@ -9,6 +9,7 @@ import Layout from './Layout'
 import Header from './Header'
 import Btn from './Btn'
 import './style.css'
+import axios from 'axios'
 
 
 

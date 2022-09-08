@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import Btn from './Btn'
 
 const DiaryItem = ({id, emotion, content, date}) => {
+   
   const navigate = useNavigate()
   const strDate = new Date(parseInt(date)).toLocaleDateString()
   const goEidt = (e) => {

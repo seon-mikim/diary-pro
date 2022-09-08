@@ -58,6 +58,7 @@ header .head_btn_right{
 }
 
 
+
 .DiaryList .menu_wrap{
     
     margin-top: 20px;
@@ -83,9 +84,11 @@ header .head_btn_right{
     padding: 10px 20px;
     cursor: pointer;
     font-size: 18px;
+    
 }
 
 .DiaryItem {
+    width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid #e2e2e2;
@@ -176,7 +179,7 @@ header .head_btn_right{
 }
 .DiaryEditor textarea {
     font-size: 20px;
-    width: 96%;
+    width: 94.5%;
     min-height: 200px;
     resize: vertical;
     border: none;
